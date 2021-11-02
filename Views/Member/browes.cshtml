@@ -1,0 +1,23 @@
+﻿@model prjDBHomework.Models.TextModel
+@{
+    ViewBag.Title = "browes";
+    Layout = "~/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h2>@ViewBag.theGallery</h2>
+
+
+@foreach (var item in Model.art)
+{
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="@item.picture" style="width:400px;height:270px;" />
+            <div class="caption">
+                <h4>@item.artName</h4>
+                <h4>@item.introduce</h4>
+                <p><a href="/member/favorite?aNo=@item.aNo" class="btn btn-primary" >加到最愛</a></p>
+            </div>
+        </div>
+    </div>
+}
+
