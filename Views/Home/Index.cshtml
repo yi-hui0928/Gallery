@@ -1,0 +1,46 @@
+﻿@model IEnumerable<prjDBHomework.Models.Gallery>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>美術館一覽</h2>
+<div class="col-md-4">
+    <div class="thumbnail">
+        <img src="~/Images/1.JPG" style="width:400px;height:270px;" />
+        <div class="caption">
+            <h4>國立台灣美術館</h4>
+            <p><a href="/Member/browse?No=1" class="btn btn-primary">瀏覽</a></p>
+            <p><a href="/member/visit?gNo=1" class="btn btn-primary">曾經去過</a></p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="thumbnail">
+        <img src="~/Images/4.JPG" style="width:400px;height:270px;" />
+        <div class="caption">
+            <h4>高雄市立美術館</h4>
+            <p><a href="/Member/browse?No=2" class="btn btn-primary">瀏覽</a></p>
+            <p><a href="/member/visit?gNo=2" class="btn btn-primary">曾經去過</a></p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="thumbnail">
+        <img src="~/Images/3.JPG" style="width:400px;height:270px;" />
+        <div class="caption">
+            <h4>台北市立美術館</h4>
+            <p><a href="/Member/browse?No=3" class="btn btn-primary">瀏覽</a></p>
+            <p><a href="/member/visit?gNo=3" class="btn btn-primary">曾經去過</a></p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="thumbnail">
+        <img src="~/Images/2.JPG" style="width:400px;height:270px;" />
+        <div class="caption">
+            <h4>桃園市立美術館</h4>
+            <p><a href="/Member/browse?No=0" class="btn btn-primary">瀏覽</a></p>
+            <p><a href="/member/visit?gNo=0" class="btn btn-primary">曾經去過</a></p>
+        </div>
+    </div>
+</div>
