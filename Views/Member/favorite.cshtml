@@ -1,0 +1,26 @@
+﻿
+@model prjDBHomework.Models.TextModel
+@{
+    ViewBag.Title = "favorite";
+    Layout = "~/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h2>我的最愛</h2>
+@if (Model.collects.Count > 0)
+{
+    foreach (var item in Model.collects)
+    {
+        foreach (var i in Model.art)
+        {
+            if (item.aNo == i.aNo)
+            {
+                <img src="@i.picture" style="width:400px;height:270px;" />
+                <div class="caption">
+                    <h4>@i.artName</h4>
+                    <p><a href="/member/DeleteFavorite?aNo=@i.aNo" class="btn btn-primary">刪除</a></p>
+                </div>
+            }
+        }
+    }
+}
+
