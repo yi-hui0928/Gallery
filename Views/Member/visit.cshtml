@@ -1,0 +1,26 @@
+﻿
+
+@model prjDBHomework.Models.TextModel
+@{
+    ViewBag.Title = "visit";
+    Layout = "~/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h2>拜訪過</h2>
+@if (Model.visits.Count > 0)
+{
+    foreach (var item in Model.visits)
+    {
+        foreach (var i in Model.gallry)
+        {
+            if (item.gNo == i.gNo)
+            {
+                <div class="caption">
+                    <h4>@i.name</h4>
+                    <p><a href="/member/DeleteVisit?gNo=@i.gNo" class="btn btn-primary">刪除</a></p>
+                </div>
+            }
+        }
+    }
+}
+
